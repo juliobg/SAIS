@@ -1,12 +1,17 @@
 # C++14 SA-IS algorithm implementation
 
-A suffix array is a sorted array of all suffixes of a string. This an implementation of the SA-IS algorithm to built a suffix array. For example, just calling:
+A suffix array is a sorted array of all suffixes of a string. This an implementation of the SA-IS algorithm to built a suffix array in linear time. For example, just calling:
 
     std::string str("thisastringfortesting");
-    auto sa = sais_suffix_array(str);
+    std::vector<int> sa = sais_suffix_array(str);
 
 will produce the following array:
 
+    { 21, 0, 4, 15, 11, 20, 10, 1, 18, 8, 2, 19, 9, 12, 7, 13, 3, 16, 5, 14, 0, 17, 6 }
+
+which corresponds to the suffixes (note empty suffix is also included in the array):
+
+    21
     04 astringfortesting
     15 esting
     11 fortesting
